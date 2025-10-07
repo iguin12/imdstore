@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMD Store - Moda Masculina Oversized e Times</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Variáveis de Cores */
+        :root {
+            --cor-principal: #000;
+            --cor-whatsapp: #25D366;
+            --cor-fundo-claro: #f5f5f5; 
+            --cor-texto: #333;
+            --cor-texto-claro: #fff;
+        }
+
+        body { 
+            font-family: 'Helvetica Neue', Arial, sans-serif; 
+            
+            /* Fundo voltou para a cor clara original */
+            background-color: var(--cor-fundo-claro); 
+            
+            margin: 0; 
+            padding: 0; 
+            color: var(--cor-texto); /* Texto principal voltou a ser escuro */
+        }
+        
+        /* CABEÇALHO */
+        header { 
+            background-color: var(--cor-principal); /* Fundo preto sólido */
+            color: #fff; 
+            text-align: center; 
+            padding: 20px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* Estilo para a imagem do logo */
+        .logo-img { 
+            max-height: 50px; 
+            width: auto;
+            margin: 0 auto;
+            display: block; 
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            margin-left: 15px; 
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin-left: 15px;
+            font-size: 1.4em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: var(--cor-whatsapp);
+        }
+
+        /* NAVEGAÇÃO RÁPIDA (MENU) */
+        .nav-menu {
+            text-align: center;
+            background-color: var(--cor-principal);
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-top: 1px solid #1a1a1a;
+            position: sticky; 
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-menu a {
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 0 15px;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: var(--cor-whatsapp);
+        }
+
+        h2 { 
+            text-align: center; 
+            margin-top: 40px; 
+            text-transform: uppercase;
+            font-size: 1.8em;
+            color: var(--cor-texto); /* Títulos voltaram a ser escuros */
+        }
+        
+        /* GRID DE PRODUTOS */
+        .produtos { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 30px; 
+            margin: 30px 20px; 
+        }
+        
+        .produto { 
+            background: #fff; 
+            padding: 15px; 
+            border-radius: 10px; 
+            text-align: left; 
+            width: 250px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            transition: transform 0.3s;
+        }
+        .produto:hover {
+            transform: translateY(-5px);
+        }
+
+        .produto img { 
+            width: 100%; 
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px; 
+            margin-bottom: 10px; 
+            cursor: pointer; 
+        }
+
+        /* Estilo para remover a linha azul do link em volta da imagem */
+        .produto a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .produto p:nth-child(3) { 
+            font-size: 1em;
+            font-weight: bold;
+            color: var(--cor-texto);
+            margin-top: 5px;
+        }
+
+        .preco {
+            font-size: 1.6em;
+            color: var(--cor-whatsapp);
+            font-weight: 900;
+            margin: 8px 0 15px;
+        }
+
+        .comprar { 
+            display: block; 
+            text-align: center;
+            padding: 12px; 
+            background: var(--cor-whatsapp); 
+            color: #fff; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .comprar:hover {
+            background: #128C7E;
+        }
+        .comprar i {
+            margin-right: 5px;
+        }
+
+        /* RODAPÉ */
+        footer { 
+            text-align: center; 
+            padding: 20px; 
+            margin-top: 50px; 
+            background: var(--cor-principal); /* Fundo preto sólido */
+            color: #fff; 
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+            }
+            .social-icons {
+                margin-top: 10px;
+            }
+            .nav-menu a {
+                display: block;
+                padding: 5px 0;
+            }
+            .produto {
+                width: 90%;
+            }
+            .logo-img {
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="social-icons">
+        <a href="https://wa.me/556191152451" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com/imd.store01" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+    
+    <img src="https://imgur.la/images/2025/10/07/Captura-de-tela-2024-11-21-205746.png" alt="IMD Store Logo" class="logo-img">
+    
+</header>
+
+<nav class="nav-menu">
+    <a href="#oversized">Oversized</a>
+    <a href="#time">Camisa de Time</a>
+    <a href="#shorts">Shorts</a>
+</nav>
+
+<hr>
+
+<h2 id="oversized">Oversized</h2>
+<div class="produtos">
+    <div class="produto">
+        <a href="https://imgur.la/images/2025/10/07/TAM-G-R8000-42c9c268d03723703.jpeg">
+            <img src="https://imgur.la/images/2025/10/07/TAM-G-R8000-42c9c268d03723703.jpeg" alt="Oversized Essencial">
+        </a>
+        <p>Oversized</p>
+        <p class="preco">R$ 79,90</p>
+        <a class="comprar" href="https://wa.me/556191152451?text=Olá,%20quero%20comprar%20Oversized%20Essencial%20de%20R$79,90" target="_blank">
+            <i class="fab fa-whatsapp"></i> Comprar
+        </a>
+    </div>
+    <div class="produto">
+        <a href="https://imgur.la/images/2025/10/07/TAM-M-R8000.jpg">
+            <img src="https://imgur.la/images/2025/10/07/TAM-M-R8000.jpg" alt="Oversized Algodão Pima">
+        </a>
+        <p>Oversized</p>
+        <p class="preco">R$ 79,90</p>
+        <a class="comprar" href="https://wa.me/556191152451?text=Olá,%20quero%20comprar%20Oversized%20Algodão%20Pima%20de%20R$79,90" target="_blank">
+            <i class="fab fa-whatsapp"></i> Comprar
+        </a>
+    </div>
+    <div class="produto">
+        <a href="https://imgur.la/images/2025/10/07/TAM-G-R8000-1dab33d75401d8cff.jpeg">
+            <img src="https://imgur.la/images/2025/10/07/TAM-G-R8000-1dab33d75401d8cff.jpeg" alt="Oversized Mescla">
+        </a>
+        <p>Oversized</p>
+        <p class="preco">R$ 79,90</p>
+        <a class="comprar" href="https://wa.me/556191152451?text=Olá,%20quero%20comprar%20Oversized%20Mescla%20de%20R$79,90" target="_blank">
+            <i class="fab fa-whatsapp"></i> Comprar
+        </a>
+    </div>
+    <div class="produto">
+        <a href="https://imgur.la/images/2025/10/07/TAM-M-R8000-3.jpg">
+            <img src="https://imgur.la/images/2025/10/07/TAM-M-R8000-3.jpg" alt="Oversized Estampada">
+        </a>
+        <p>camisa mormai</p>
+        <p class="preco">R$ 79,90</p>
+        <a class="comprar" href="https://wa.me/556191152451?text=Olá,%20quero%20comprar%20Oversized%20Estampada%20de%20R$79,90" target="_blank">
+            <i class="fab fa-whatsapp"></i> Comprar
+        </a>
+    </div>
+</div>
+
+<hr>
+
+<h2 id="time">Camisa de Time</h2>
+<div class="produtos">
+    <div class="produto">
+        <a href="https://imgur.la/images/2025/10/07/TAM-G-R13990-4.png">
+            <img src="https://imgur.la/images/2025/10/07/TAM-G-R13990-4.png" alt="Camisa de Time Nacional A">
+        </a>
+        <p>Camisa de Time</p>
+        <p class="preco">R$ 139,90</p>
+        <a class="comprar" href="https://wa.me/556191152451?text=Olá,%20quero%20comprar%20a%20Camisa%20de%20Time%20Nacional%20A%20de%20R$139,90" target="_blank">
+            <i class="fab fa-whatsapp"></i> Comprar
+        </a>
+    </div>
+    <div class="produto">
+        <a href="https://imgur.la/images/2025/10/07/TAM-G-R13990-2.png">
+            <img src="https://imgur.la/images/2025/10/07/TAM-G-R13990-2.png" alt="Camisa de Time Edição Europa">
+        </a>
+        <p>Camisa de Time</p>
+        <p class="preco">R$ 139,90</p>
+        <a class="comprar" href="https://wa.me/556191152451?text=Olá,%20quero%20comprar%20a%20Camisa%20de%20Time%20Edição%20Europa%20de%20R$139,90" target="_blank">
+            <i class="fab fa-whatsapp"></i> Comprar
+        </a>
+    </div>
+    <div class="produto">
+        <a href="https://imgur.la/images/2025/10/07/TAM-G-R13990.png">
+            <img src="https://imgur.la/images/2025/10/07/TAM-G-R13990.png" alt="Camisa de Time Nacional B">
+        </a>
+        <p>Camisa de Time</p>
+        <p class="preco">R$ 139,90</p>
+        <a class="comprar" href="https://wa.me/556191152451?text=Olá,%20quero%20comprar%20a%20Camisa%20de%20Time%20Nacional%20B%20de%20R$139,90" target="_blank">
+            <i class="fab fa-whatsapp"></i> Comprar
+        </a>
+    </div>
+    <div class="produto">
+        <a href="https://imgur.la/images/2025/10/07/TAM-G-R13990-5.png">
+            <img src="https://imgur.la/images/2025/10/07/TAM-G-R13990-5.png" alt="Camisa de Time Retrô">
+        </a>
+        <p>Camisa de Time</p>
+        <p class="preco">R$ 139,90</p>
+        <a class="comprar" href="https://wa.me/556191152451?text=Olá,%20quero%20comprar%20a%20Camisa%20de%20Time%20Retrô%20de%20R$139,90" target="_blank">
+            <i class="fab fa-whatsapp"></i> Comprar
+        </a>
+    </div>
+</div>
+
+<hr>
+
+<h2 id="shorts">Shorts</h2>
+<div class="produtos">
+    <div class="produto">
+        <a href="https://imgur.la/images/2025/10/07/WhatsApp-Image-2025-10-06-at-18.47.50-2.jpeg">
+            <img src="https://imgur.la/images/2025/10/07/WhatsApp-Image-2025-10-06-at-18.47.50-2.jpeg" alt="Shorts Moletom Cinza">
+        </a>
+        <p>Shorts</p>
+        <p class="preco">R$ 59,90</p>
+        <a class="comprar" href="https://wa.me/556191152451?text=Olá,%20quero%20comprar%20o%20Shorts%20Moletom%20Premium%20de%20R$79,90" target="_blank">
+            <i class="fab fa-whatsapp"></i> Comprar
+        </a>
+    </div>
+    <div class="produto">
+        <a href="https://imgur.la/images/2025/10/07/WhatsApp-Image-2025-10-06-at-18.47.50-1.jpeg">
+            <img src="https://imgur.la/images/2025/10/07/WhatsApp-Image-2025-10-06-at-18.47.50-1.jpeg" alt="Shorts Tactel Liso">
+        </a>
+        <p>Shorts </p>
+        <p class="preco">R$ 59,90</p>
+        <a class="comprar" href="https://wa.me/556191152451?text=Olá,%20quero%20comprar%20o%20Shorts%20Tactel%20Esportivo%20de%20R$59,90" target="_blank">
+            <i class="fab fa-whatsapp"></i> Comprar
+        </a>
+    </div>
+</div>
+
+<footer>
+    Siga-nos no Instagram: <a href="https://instagram.com/imd.store01" target="_blank">@imd.store01</a>
+</footer>
+
+</body>
+</html>
